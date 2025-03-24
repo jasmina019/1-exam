@@ -3,7 +3,7 @@ from .models import Location
 
 
 class LocationSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Location
-        fields = ['id', 'name', 'latitude', 'longitude', 'elevation']
+        fields = ['id', 'name', 'latitude', 'longitude', 'elevation', 'created_at']
+

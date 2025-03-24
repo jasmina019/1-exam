@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import LocationListCreateView, LocationDetailView
+from . import views
+
 
 urlpatterns = [
-    path('locations/', LocationListCreateView.as_view(), name='location-list-create'),
-    path('locations/<int:pk>/', LocationDetailView.as_view(), name='location-detail'),
+    path('locations/', views.LocationListCreateView.as_view(), name='list-create'),
+    path('locations/<int:pk>/', views.LocationRetrieveUpdateDestroyView.as_view(), name='retrieve-update-delete'),
 ]
